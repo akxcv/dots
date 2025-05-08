@@ -1,0 +1,113 @@
+// -*- mode: jsonc -*-
+{
+    "reload_style_on_change": true,
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    // Choose the order of the modules
+    "modules-left": [
+        "group/clock-time",
+        "group/clock-date"
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        "group/state",
+        "group/controls"
+    ],
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "active": "",
+            "default": "",
+            "empty": ""
+        },
+        "persistent-workspaces": {
+            "DP-1": [1, 2, 3, 4],
+            "HDMI-A-1": [5, 6]
+        }
+    },
+    "group/clock-time": {
+        "orientation": "inherit",
+        "modules": [
+            "custom/clock-time"
+        ]
+    },
+    "group/clock-date": {
+        "orientation": "inherit",
+        "modules": [
+            "custom/clock-date"
+        ]
+    },
+    "group/state": {
+        "orientation": "inherit",
+        "modules": [
+            "tray",
+            "hyprland/language"
+        ]
+    },
+    "group/controls": {
+        "orientation": "inherit",
+        "modules": [
+            "pulseaudio#input",
+            "pulseaudio",
+            "bluetooth",
+            "custom/power"
+        ]
+    },
+    // Modules configuration
+    "tray": {
+        "icon-size": 16,
+        "spacing": 0
+    },
+    "custom/clock-date": {
+        "exec": "date +\"%A, %B %-d\"",
+        "tooltip": false,
+        "interval": 1
+    },
+    "custom/clock-time": {
+        "exec": "date +\"%H:%M\"",
+        "tooltip": false,
+        "interval": 1
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{icon}",
+        "format-bluetooth": "{icon}",
+        "format-bluetooth-muted": " {icon}",
+        "format-muted": " ",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "tooltip-format": "{volume}% {desc}",
+        "on-click": "pavucontrol"
+    },
+    "pulseaudio#input": {
+        "format": "{format_source}",
+        "format-source": "",
+        "format-source-muted": ""
+    },
+    "bluetooth": {
+        "format": "",
+        "tooltip": true,
+        "tooltip-format": "{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias} {device_battery_percentage}"
+    },
+    "hyprland/language": {
+        "format-en": "en",
+        "format-ru": "ru"
+    },
+    "custom/power": {
+        "format" : "⏻",
+		"tooltip": false,
+        "on-click": "rofi -show power-menu -modi power-menu:/home/kov/.config/rofi/scripts/rofi-power-menu -theme /home/kov/.config/rofi/themes/rofi-power-menu.rasi -class rofipower"
+    }
+}
+

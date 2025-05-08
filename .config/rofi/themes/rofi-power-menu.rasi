@@ -1,0 +1,88 @@
+* {
+    color-bg: #2f2c40;
+    color-fg: #c2acc1;
+    color-gray: #62646a;
+    color-black: #070711;
+    color-orange: #bc6755;
+    color-red: #b34358;
+
+    background-color: transparent;
+    foreground: @color-fg;
+    border-color: @color-fg;
+    separatorcolor: @border-color;
+    scrollbar-handle: @border-color;
+
+    normal-background: @background;
+    normal-foreground: @foreground;
+    alternate-normal-background: @background;
+    alternate-normal-foreground: @foreground;
+    selected-normal-background: @color-black;
+    selected-normal-foreground: @color-red;
+
+    spacing: 0;
+}
+
+window {
+    fullscreen: true;
+    background: #2f2c4050;
+    background-color: #2f2c4050;
+    padding: 0;
+    children: [dummy, mainbox, dummy];
+}
+
+dummy {
+    expand: true;
+}
+
+mainbox {
+    orientation: horizontal;
+    padding: 0;
+    children: [dummy, listview, dummy];
+}
+
+inputbar {
+    enabled: false;
+    padding: 0;
+}
+
+message {
+    padding: 0;
+}
+
+listview {
+    border: none;
+    spacing: 20px;
+}
+
+scrollbar {
+    handle-width: 0;
+    width: 0;
+    padding: 0;
+}
+
+element {
+    orientation: horizontal;
+    children: [element-text];
+    padding: 30px 25px;
+    background-color: #2f2c40ee;
+    text-color: @foreground;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+element.selected {
+    background-color: @color-fg;
+    text-color: @color-bg;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    cursor: inherit;
+}
+
+mode-switcher {
+    enabled: false;
+    padding: 0;
+}
+

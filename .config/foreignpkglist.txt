@@ -1,0 +1,13 @@
+1password
+1password-cli
+betterdiscord-installer
+betterdiscordctl-git
+clipse
+downgrade
+hyprpicker-git
+ttf-apple-emoji
+ttf-iosevka
+ttf-pt-mono
+ungoogled-chromium-bin
+yay-bin
+yay-bin-debug

@@ -1,0 +1,82 @@
+@define-color background #2f2c40;
+@define-color light #c2acc1;
+@define-color secondary #999cb9;
+@define-color grey #62646a;
+@define-color white #fff;
+
+* {
+    font-family: IBM Plex Sans, FontAwesome;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+window#waybar {
+    all: unset;
+}
+
+.modules-center, #clock-time, #clock-date, #controls, #state {
+    padding: 7px;
+    border-radius: 10px;
+    background: alpha(@background, .83);
+    color: @light;
+    box-shadow: 0px 0px 2px alpha(@background, .6);
+}
+
+.modules-left {
+    margin: 10 0 0 10;
+}
+
+.modules-center {
+    margin: 10 0 0 0;
+}
+
+.modules-right {
+    margin: 10 10 0 0;
+}
+
+#clock-date {
+    margin-left: 10;
+}
+
+#state {
+    margin-right: 10;
+}
+
+tooltip {
+    background: @background;
+    color: @light;
+}
+
+#clock-time widget > *,
+#clock-date widget > *,
+#controls widget > *,
+#state widget > * {
+    padding: 0 10px;
+}
+
+widget > *:hover {
+    transition: all .2s ease;
+    color: @white;
+}
+
+#state #tray {
+    padding: 0;
+}
+
+#state #tray widget > * {
+    padding: 0 3px;
+}
+
+#workspaces button {
+    all: unset;
+    color: alpha(@secondary, .4);
+    padding: 0 5px;
+    transition: all .2s ease;
+}
+#workspaces button:hover {
+    color: @secondary;
+}
+#workspaces button.visible {
+    color: @light;
+}
+
