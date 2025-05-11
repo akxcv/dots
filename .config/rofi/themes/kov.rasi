@@ -1,9 +1,15 @@
-@import "kov"
-
 * {
+    color-bg: #222821;
+    color-fg: #eff6ee;
+    color-gray: #465045;
+    color-black: #131713;
+    color-orange: #ae845a;
+    color-bg-hl: #465045;
+    color-fg-hl: #f5d58c;
+
     background-color: transparent;
     foreground: @color-fg;
-    border-color: @color-fg;
+    border-color: @color-gray;
     separatorcolor: @border-color;
     scrollbar-handle: @border-color;
 
@@ -18,26 +24,33 @@
 }
 
 window {
-    fullscreen: true;
-    background-color: transparent;
-    padding: 0;
-    children: [dummy, mainbox, dummy];
-    border: 0;
-}
-
-dummy {
-    expand: true;
+    border: 2px;
+    background-color: @color-bg;
+    width: 400px;
+    height: 459px;
 }
 
 mainbox {
-    orientation: horizontal;
     padding: 0;
-    children: [dummy, listview, dummy];
+    background-color: @color-bg;
 }
 
 inputbar {
-    enabled: false;
-    padding: 0;
+    padding: 10;
+    children: [prompt, entry];
+}
+
+prompt {
+    text-color: @color-fg-hl;
+    vertical-align: 0.5;
+    padding: 5 10 5 0;
+}
+
+entry {
+    padding: 5 0 5 10;
+    text-color: @color-fg-hl;
+    background-color: @color-black;
+    border-radius: 10;
 }
 
 message {
@@ -46,7 +59,6 @@ message {
 
 listview {
     border: none;
-    spacing: 20px;
 }
 
 scrollbar {
@@ -57,21 +69,24 @@ scrollbar {
 
 element {
     orientation: horizontal;
-    children: [element-text];
-    padding: 30px 25px;
-    background-color: #2f2c40ee;
+    children: [element-icon, element-text];
+    spacing: 17px;
+    padding: 15px 30px;
     text-color: @foreground;
-    border-radius: 10px;
     cursor: pointer;
 }
 
 element.selected {
-    background-color: @color-fg;
-    text-color: @color-bg;
+    text-color: @color-fg-hl;
+    background-color: @color-bg-hl;
+}
+
+element-icon {
+    size: 2em;
 }
 
 element-text {
-    background-color: transparent;
+    margin: 10px 0 0 0;
     text-color: inherit;
     cursor: inherit;
 }
@@ -80,4 +95,3 @@ mode-switcher {
     enabled: false;
     padding: 0;
 }
-

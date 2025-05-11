@@ -1,0 +1,15 @@
+@import "kov"
+
+window {
+    height: 464px;
+}
+
+element {
+    children: [element-text];
+    padding: 10px;
+}
+
+element-text {
+    margin: 0;
+}
+

@@ -1,0 +1,98 @@
+* {
+    color-bg: ${KOV_THEME_COLOR_CLAY_100};
+    color-fg: ${KOV_THEME_COLOR_CLAY_950};
+    color-gray: ${KOV_THEME_COLOR_CLAY_300};
+    color-black: ${KOV_THEME_COLOR_CLAY_050};
+    color-orange: ${KOV_THEME_COLOR_ORANGE_500};
+    color-bg-hl: ${KOV_THEME_COLOR_CLAY_300};
+    color-fg-hl: ${KOV_THEME_COLOR_GOLD_900};
+
+    background-color: transparent;
+    foreground: @color-fg;
+    border-color: @color-gray;
+    separatorcolor: @border-color;
+    scrollbar-handle: @border-color;
+
+    normal-background: @background;
+    normal-foreground: @foreground;
+    alternate-normal-background: @background;
+    alternate-normal-foreground: @foreground;
+    selected-normal-background: @color-black;
+    selected-normal-foreground: @color-red;
+
+    spacing: 0;
+}
+
+window {
+    border: 2px;
+    background-color: @color-bg;
+    width: 400px;
+    height: 459px;
+}
+
+mainbox {
+    padding: 0;
+    background-color: @color-bg;
+}
+
+inputbar {
+    padding: 10;
+    children: [prompt, entry];
+}
+
+prompt {
+    text-color: @color-fg-hl;
+    vertical-align: 0.5;
+    padding: 5 10 5 0;
+}
+
+entry {
+    padding: 5 0 5 10;
+    text-color: @color-fg-hl;
+    background-color: @color-black;
+    border-radius: 10;
+}
+
+message {
+    padding: 0;
+}
+
+listview {
+    border: none;
+}
+
+scrollbar {
+    handle-width: 0;
+    width: 0;
+    padding: 0;
+}
+
+element {
+    orientation: horizontal;
+    children: [element-icon, element-text];
+    spacing: 17px;
+    padding: 15px 30px;
+    text-color: @foreground;
+    cursor: pointer;
+}
+
+element.selected {
+    text-color: @color-fg-hl;
+    background-color: @color-bg-hl;
+}
+
+element-icon {
+    size: 2em;
+}
+
+element-text {
+    margin: 10px 0 0 0;
+    text-color: inherit;
+    cursor: inherit;
+}
+
+mode-switcher {
+    enabled: false;
+    padding: 0;
+}
+
