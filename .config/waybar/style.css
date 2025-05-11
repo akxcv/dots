@@ -1,25 +1,41 @@
-@define-color background #2f2c40;
-@define-color light #c2acc1;
-@define-color secondary #999cb9;
-@define-color grey #62646a;
-@define-color white #fff;
+/* https://www.inclusivecolors.com/?style_dictionary=eyJjb2xvciI6eyJiYXNlIjp7Im15Y2xheSI6eyI1MCI6eyJ2YWx1ZSI6IiMxMzE3MTMifSwiMTAwIjp7InZhbHVlIjoiIzIyMjgyMSJ9LCIyMDAiOnsidmFsdWUiOiIjMzEzODMwIn0sIjMwMCI6eyJ2YWx1ZSI6IiM0NjUwNDUiLCJsb2NrZWQiOnRydWV9LCI0MDAiOnsidmFsdWUiOiIjNjU3MzY0In0sIjUwMCI6eyJ2YWx1ZSI6IiM4MDkxN2UifSwiNjAwIjp7InZhbHVlIjoiI2E0YmFhMiJ9LCI3MDAiOnsidmFsdWUiOiIjYmNkNWJhIn0sIjgwMCI6eyJ2YWx1ZSI6IiNjMWRhYmYifSwiOTAwIjp7InZhbHVlIjoiI2M0ZGRjMiJ9LCI5NTAiOnsidmFsdWUiOiIjZWZmNmVlIn19LCJteWdvbGQiOnsiNTAiOnsidmFsdWUiOiIjMWIxNTA3In0sIjEwMCI6eyJ2YWx1ZSI6IiMyZDI1MTAifSwiMjAwIjp7InZhbHVlIjoiIzQwMzUxYSJ9LCIzMDAiOnsidmFsdWUiOiIjNjA1MDJhIn0sIjQwMCI6eyJ2YWx1ZSI6IiM4MTZkM2IifSwiNTAwIjp7InZhbHVlIjoiI2EyODk0YyJ9LCI2MDAiOnsidmFsdWUiOiIjZDBiMDYzIn0sIjcwMCI6eyJ2YWx1ZSI6IiNlZWNhNzIifSwiODAwIjp7InZhbHVlIjoiI2YzY2Y3NSJ9LCI5MDAiOnsidmFsdWUiOiIjZjVkNThjIiwibG9ja2VkIjp0cnVlfSwiOTUwIjp7InZhbHVlIjoiI2ZjZjNlNCJ9fSwiTXlyZWRkaXNoIjp7IjUwIjp7InZhbHVlIjoiIzI1MTAwYSJ9LCIxMDAiOnsidmFsdWUiOiIjM2MxZTE1In0sIjIwMCI6eyJ2YWx1ZSI6IiM1MzJiMjAifSwiMzAwIjp7InZhbHVlIjoiIzdiNDMzMiJ9LCI0MDAiOnsidmFsdWUiOiIjYTQ1YzQ2In0sIjUwMCI6eyJ2YWx1ZSI6IiNjZDc0NTkifSwiNjAwIjp7InZhbHVlIjoiI2U1YTQ5NSIsImxvY2tlZCI6dHJ1ZX0sIjcwMCI6eyJ2YWx1ZSI6IiNlZGM1YmUifSwiODAwIjp7InZhbHVlIjoiI2VlY2JjNSJ9LCI5MDAiOnsidmFsdWUiOiIjZjBkMmNjIn0sIjk1MCI6eyJ2YWx1ZSI6IiNmYWYyZjEifX0sInN3YXRjaDEiOnsiNTAiOnsidmFsdWUiOiIjMGUxOTBkIn0sIjEwMCI6eyJ2YWx1ZSI6IiMxYTJhMTkifSwiMjAwIjp7InZhbHVlIjoiIzI3M2IyNSJ9LCIzMDAiOnsidmFsdWUiOiIjM2M1OTM5In0sIjQwMCI6eyJ2YWx1ZSI6IiM1Mzc4NGYifSwiNTAwIjp7InZhbHVlIjoiIzZhOTc2NSJ9LCI2MDAiOnsidmFsdWUiOiIjODljMTgyIiwibG9ja2VkIjp0cnVlfSwiNzAwIjp7InZhbHVlIjoiIzlkZGQ5NSJ9LCI4MDAiOnsidmFsdWUiOiIjYTBlNDlhIn0sIjkwMCI6eyJ2YWx1ZSI6IiNhNGVhOWQifSwiOTUwIjp7InZhbHVlIjoiI2U2ZjllNSJ9fSwic3dhdGNoMiI6eyI1MCI6eyJ2YWx1ZSI6IiMxZTE0MGEifSwiMTAwIjp7InZhbHVlIjoiIzMyMjMxNSJ9LCIyMDAiOnsidmFsdWUiOiIjNDUzMjIwIn0sIjMwMCI6eyJ2YWx1ZSI6IiM2NzRkMzMifSwiNDAwIjp7InZhbHVlIjoiIzhiNjg0NyJ9LCI1MDAiOnsidmFsdWUiOiIjYWU4NDVhIn0sIjYwMCI6eyJ2YWx1ZSI6IiNkZmE5NzUiLCJsb2NrZWQiOnRydWV9LCI3MDAiOnsidmFsdWUiOiIjZWRjOGFiIn0sIjgwMCI6eyJ2YWx1ZSI6IiNlZWNkYjMifSwiOTAwIjp7InZhbHVlIjoiI2YwZDNiZCJ9LCI5NTAiOnsidmFsdWUiOiIjZmFmM2VlIn19LCJteXBpbmtpc2h3aGl0ZSI6eyI1MCI6eyJ2YWx1ZSI6IiMxYzE0MTIifSwiMTAwIjp7InZhbHVlIjoiIzJlMjQyMSJ9LCIyMDAiOnsidmFsdWUiOiIjNDEzMzJmIn0sIjMwMCI6eyJ2YWx1ZSI6IiM2MjRlNDgifSwiNDAwIjp7InZhbHVlIjoiIzgzNjk2MiJ9LCI1MDAiOnsidmFsdWUiOiIjYTU4NTdjIn0sIjYwMCI6eyJ2YWx1ZSI6IiNjOGFlYTcifSwiNzAwIjp7InZhbHVlIjoiI2RhY2JjNyJ9LCI4MDAiOnsidmFsdWUiOiIjZGVkMGNkIn0sIjkwMCI6eyJ2YWx1ZSI6IiNlMGQ0ZDEiLCJsb2NrZWQiOnRydWV9LCI5NTAiOnsidmFsdWUiOiIjZjZmM2YzIn19LCJteWJhc2UiOnsiNTAiOnsidmFsdWUiOiIjMTcxNTFhIn0sIjEwMCI6eyJ2YWx1ZSI6IiMyNzI1MmIifSwiMjAwIjp7InZhbHVlIjoiIzM3MzUzZCIsImxvY2tlZCI6dHJ1ZX0sIjMwMCI6eyJ2YWx1ZSI6IiM1MzUxNWMifSwiNDAwIjp7InZhbHVlIjoiIzcwNmQ3YSJ9LCI1MDAiOnsidmFsdWUiOiIjOGQ4Yjk1In0sIjYwMCI6eyJ2YWx1ZSI6IiNiNWI0YmIifSwiNzAwIjp7InZhbHVlIjoiI2NkY2NkMSJ9LCI4MDAiOnsidmFsdWUiOiIjZDNkM2Q2In0sIjkwMCI6eyJ2YWx1ZSI6IiNlMWUxZTMifSwiOTUwIjp7InZhbHVlIjoiI2Y0ZjRmNSJ9fSwibXlwdXJwbGUiOnsiNTAiOnsidmFsdWUiOiIjMWMxMzFlIn0sIjEwMCI6eyJ2YWx1ZSI6IiMyZjIxMzIifSwiMjAwIjp7InZhbHVlIjoiIzM5MjkzYyIsImxvY2tlZCI6dHJ1ZX0sIjMwMCI6eyJ2YWx1ZSI6IiM1ZDQ1NjIifSwiNDAwIjp7InZhbHVlIjoiIzg1NjQ4YiJ9LCI1MDAiOnsidmFsdWUiOiIjYTU3ZmFkIn0sIjYwMCI6eyJ2YWx1ZSI6IiNjNGFjYzkifSwiNzAwIjp7InZhbHVlIjoiI2Q5YzlkYyJ9LCI4MDAiOnsidmFsdWUiOiIjZGRjZmUwIn0sIjkwMCI6eyJ2YWx1ZSI6IiNkZmQyZTIifSwiOTUwIjp7InZhbHVlIjoiI2Y2ZjNmNyJ9fX19fQ%253D%253D */
+
+@define-color clay-50  #131713;
+@define-color clay-100 #222821;
+@define-color clay-200 #313830;
+@define-color clay-500 #80917e;
+@define-color clay-600 #a4baa2;
+@define-color gold-950 #fcf3e4;
+@define-color gold-900 #f5d58c;
+@define-color gold-700 #eeca72;
+@define-color gold-600 #d0b063;
+@define-color gold-500 #a2894c;
+@define-color gold-200 #40351a;
+
+@define-color color-bg @clay-200;
+@define-color color-fg @gold-900;
+@define-color color-fg-hl @gold-950;
+@define-color color-fg-inactive @clay-600;
 
 * {
     font-family: IBM Plex Sans, FontAwesome;
     font-size: 15px;
-    font-weight: 600;
 }
 
 window#waybar {
     all: unset;
 }
 
+widget {
+    font-weight: 500;
+}
+
 .modules-center, #clock-time, #clock-date, #controls, #state {
     padding: 7px;
     border-radius: 10px;
-    background: alpha(@background, .83);
-    color: @light;
-    box-shadow: 0px 0px 2px alpha(@background, .6);
+    background: alpha(@color-bg, .83);
+    color: @color-fg;
+    box-shadow: 0px 0px 2px alpha(@color-bg, .6);
 }
 
 .modules-left {
@@ -35,16 +51,16 @@ window#waybar {
 }
 
 #clock-date {
-    margin-left: 10;
-}
-
-#state {
     margin-right: 10;
 }
 
+#state {
+    margin-left: 10;
+}
+
 tooltip {
-    background: @background;
-    color: @light;
+    background: @color-bg;
+    color: @color-fg;
 }
 
 #clock-time widget > *,
@@ -56,7 +72,7 @@ tooltip {
 
 widget > *:hover {
     transition: all .2s ease;
-    color: @white;
+    color: @color-fg-hl;
 }
 
 #state #tray {
@@ -69,14 +85,16 @@ widget > *:hover {
 
 #workspaces button {
     all: unset;
-    color: alpha(@secondary, .4);
+    color: alpha(@color-fg-inactive, .4);
     padding: 0 5px;
     transition: all .2s ease;
+    font-weight: 600;
 }
 #workspaces button:hover {
-    color: @secondary;
+    color: @color-fg-hl;
 }
 #workspaces button.visible {
-    color: @light;
+    color: @color-fg;
+    font-weight: 600;
 }
 

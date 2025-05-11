@@ -12,9 +12,17 @@ PS1='[\u@\h \W]\$ '
 
 EDITOR=nvim
 
-if uwsm check may-start && uwsm select; then
-	exec uwsm start default
+if uwsm check may-start; then
+	exec uwsm start hyprland.desktop
 fi
 
 alias dots='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
+
+function writetheme {
+    /usr/bin/bash <<"EOF"
+        source $HOME/.config/kov/themes/theme.sh
+        echo "$(export -p | grep KOV_THEME | awk '{ print $3 }')" > $HOME/.config/environment.d/10-theme.conf
+        echo "$(envsubst < $HOME/.config/kitty/current-theme.template.conf)" > $HOME/.config/kitty/current-theme.conf
+EOF
+}
 

@@ -5,15 +5,15 @@
     "position": "top", // Waybar position (top|bottom|left|right)
     // Choose the order of the modules
     "modules-left": [
-        "group/clock-time",
-        "group/clock-date"
+        "group/controls",
+        "group/state"
     ],
     "modules-center": [
         "hyprland/workspaces"
     ],
     "modules-right": [
-        "group/state",
-        "group/controls"
+        "group/clock-date",
+        "group/clock-time"
     ],
     "hyprland/workspaces": {
         "format": "{icon}",
@@ -49,10 +49,10 @@
     "group/controls": {
         "orientation": "inherit",
         "modules": [
-            "pulseaudio#input",
-            "pulseaudio",
+            "custom/power",
             "bluetooth",
-            "custom/power"
+            "pulseaudio",
+            "pulseaudio#input"
         ]
     },
     // Modules configuration

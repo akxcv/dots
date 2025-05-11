@@ -108,7 +108,7 @@
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
-    frame_width = 0
+    frame_width = 4
 
     # Defines color of the frame around the notification window.
     frame_color = "#c2acc1e5"
@@ -144,7 +144,7 @@
 
     ### Text ###
 
-    font = IBM Plex Sans 11
+    font = IBM Plex Sans 10
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -271,7 +271,7 @@
     # corners.
     # The radius will be automatically lowered if it exceeds half of the
     # notification height to avoid clipping text and/or icons.
-    corner_radius = 10
+    corner_radius = 4
 
     # Define which corners to round when drawing the window. If the corner radius
     # is set to 0 this option will be ignored.
@@ -341,8 +341,9 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#070711aa"
-    foreground = "#c2acc1"
+    background = "${KOV_THEME_COLOR_CLAY_200}"
+    foreground = "${KOV_THEME_COLOR_CLAY_950}"
+    frame_color = "${KOV_THEME_COLOR_CLAY_300}"
     timeout = 10
     # Icon for notifications with low urgency
     default_icon = none
@@ -350,16 +351,18 @@
 [urgency_normal]
     # background = "#285577"
     # foreground = "#ffffff"
-    background = "#070711e5"
-    foreground = "#c2acc1"
+    background = "${KOV_THEME_COLOR_GOLD_200}"
+    foreground = "${KOV_THEME_COLOR_GOLD_950}"
+    frame_color = "${KOV_THEME_COLOR_GOLD_300}"
     timeout = 10
     override_pause_level = 30
     # Icon for notifications with normal urgency
     default_icon = none
 
 [urgency_critical]
-    background = "#b34358e5"
-    foreground = "#ffffff"
+    background = "${KOV_THEME_COLOR_RED_200}"
+    foreground = "${KOV_THEME_COLOR_RED_950}"
+    frame_color = "${KOV_THEME_COLOR_RED_300}"
     timeout = 0
     override_pause_level = 60
     # Icon for notifications with critical urgency
