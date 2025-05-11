@@ -107,7 +107,16 @@
     "custom/power": {
         "format" : "⏻",
 		"tooltip": false,
-        "on-click": "rofi -show power-menu -modi power-menu:/home/kov/.config/rofi/scripts/rofi-power-menu -theme /home/kov/.config/rofi/themes/rofi-power-menu.rasi -class rofipower"
+        "menu": "on-click",
+        "menu-file": "$HOME/.config/waybar/custom_modules/power_menu.xml",
+        "menu-actions": {
+            "lock": "hyprlock",
+            "logout": "hyprctl dispatch exit",
+            "shutdown": "systemctl poweroff",
+            "reboot": "systemctl reboot",
+            "suspend": "systemctl suspend",
+            "hibernate": "systemctl hibernate"
+        }
     }
 }
 
