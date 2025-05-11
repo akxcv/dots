@@ -1,7 +1,7 @@
-@define-color color-bg #313830;
-@define-color color-fg #f5d58c;
-@define-color color-fg-hl #fcf3e4;
-@define-color color-fg-inactive #a4baa2;
+@define-color color-bg ${KOV_THEME_COLOR_CLAY_200};
+@define-color color-fg ${KOV_THEME_COLOR_GOLD_900};
+@define-color color-fg-hl ${KOV_THEME_COLOR_GOLD_950};
+@define-color color-fg-inactive ${KOV_THEME_COLOR_CLAY_600};
 
 * {
     font-family: IBM Plex Sans, FontAwesome;
@@ -83,3 +83,4 @@ widget > *:hover {
     color: @color-fg;
     font-weight: 600;
 }
+

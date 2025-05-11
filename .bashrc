@@ -23,6 +23,7 @@ function writetheme {
         source $HOME/.config/kov/themes/theme.sh
         echo "$(export -p | grep KOV_THEME | awk '{ print $3 }')" > $HOME/.config/environment.d/10-theme.conf
         echo "$(envsubst < $HOME/.config/kitty/current-theme.template.conf)" > $HOME/.config/kitty/current-theme.conf
+        echo "$(envsubst < $HOME/.config/waybar/style.template.css)" > $HOME/.config/waybar/style.css
 EOF
 }
 
