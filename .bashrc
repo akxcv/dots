@@ -8,7 +8,7 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias pbcopy='clipse -c'
-PS1='[\u@\h \W]\$ '
+PS1='\033[38;5;221m[\u@\h \W]\$ \033[0m'
 
 EDITOR=nvim
 
