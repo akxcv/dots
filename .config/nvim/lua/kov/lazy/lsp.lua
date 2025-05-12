@@ -37,6 +37,24 @@ return {
             cmp_lsp.default_capabilities()
         )
 
+        if vim.fn.executable("zls") == 1 then
+            local lspconfig = require("lspconfig")
+            lspconfig.zls.setup({
+                root_dir = lspconfig.util.root_pattern(
+                    ".git", "build.zig", "zls.json"
+                ) or ".",
+                settings = {
+                    zls = {
+                        enable_inlay_hints = true,
+                        enable_snippets = true,
+                        warn_style = true,
+                    },
+                },
+            })
+            vim.g.zig_fmt_parse_errors = 0
+            vim.g.zig_fmt_autosave = 0
+        end
+
         require("fidget").setup({})
         require("mason").setup()
         require("mason-lspconfig").setup({
@@ -103,3 +121,4 @@ return {
         })
     end,
 }
+
