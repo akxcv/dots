@@ -1,0 +1,12 @@
+[init]
+	defaultBranch = main
+[user]
+	email = kovacs@the418.io
+	name = Aleksandr Komarov
+[alias]
+	co = checkout
+	b = branch
+	c = commit
+	st = status
+	p = push
+	l = pull
