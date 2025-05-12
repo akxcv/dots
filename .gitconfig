@@ -10,3 +10,4 @@
 	st = status
 	p = push
 	l = pull
+	d = diff
